@@ -29,9 +29,7 @@ jobs:
     
     - name: Initialization environment
       run: |
-        sudo echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial main universe" | sudo tee -a /etc/apt/sources.list
-        sudo echo "deb-src http://us.archive.ubuntu.com/ubuntu/ xenial main universe" | sudo tee -a /etc/apt/sources.list \
-        sudo apt-get update \
+        sudo echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial main universe" | sudo tee -a /etc/apt/sources.list && sudo echo "deb-src http://us.archive.ubuntu.com/ubuntu/ xenial main universe" | sudo tee -a /etc/apt/sources.list && sudo apt-get update
         sudo apt-get install -y \
         openjdk-8-jdk android-tools-adb bc \
         bison build-essential curl flex g++-multilib m4 libxml2-utils \
